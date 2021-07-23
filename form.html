@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kullanıcı Kayıt Form Ekranı</title>
+
+  <style>
+    body{
+         margin: 20px;
+     }
+    input[type="text"], textarea, select,input[type="email"],input[type="number"]
+     {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 7px 12px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        margin-bottom: 5px;
+        
+     }
+    .form_group{
+       margin-bottom: 5px;
+       width: 400px;
+
+
+     }
+     .form_group:focus{
+         border-color: #80bdff;
+         outline: 0;
+     }
+    .btn{
+       padding: 6px 12px;
+       border-radius: 4px;
+       background-color: #007bff;
+       border:1px solid #007bff;
+       color:#fff;
+     }
+     .btn:hover{
+         background-color: #0069d9;
+         border: 1px solid #0062cc;
+     }
+    #radio1:checked::after{
+       background-color: palevioletred;
+     }
+    #radio2:checked::after{
+       color:royalblue;
+     }
+    #ülke{
+      width: 400px;
+    }
+    #mesaj{
+      width: 400px;
+    }
+    .group{
+       box-shadow: 5px 5px 7px rgb(0, 0, 0, .6);
+       width: 400px;
+       opacity: 0.7;
+          
+    }
+  </style>
+</head>
+<body>
+ <div class="group">
+    <div class="form_group">
+    Adı Soyadı: <input type="text" name="fullname" placeholder="adınızı ve soyadınızı giriniz">
+    E-Posta: <input type="email" name="email" placeholder="e-postanızı giriniz">
+    Telefon: <input type="text" pattern="\d{11}" required title="Bu alana 11 haneli telefon numaranızı giriniz." name="number" placeholder="telefon numaranızı giriniz.">
+    </div>
+    <div>
+    Yaşadığınız Ülke :<br> 
+    <select name="country" id="ülke">
+        <option value="Türkiye">Türkiye</option>
+        <option value="Almanya">Almanya</option> 
+        <option value="ABD">ABD</option>
+        <option value="İtalya">İtalya</option>
+    
+    </select>
+    </div>
+    <div>
+    Mesajınız:<br> <textarea name="Message" placeholder="mesajınız" id="mesaj"></textarea>
+    </div>
+    <div>
+      Cinsiyet: Bayan <input type="radio" name="secim" value="1" id="radio1"> Erkek <input type="radio" name="secim" value="1" id="radio2"> 
+    </div> <br>
+    <input type="button" value="Kaydet" class="btn">
+ </div>
+</body>
+
+</html>
